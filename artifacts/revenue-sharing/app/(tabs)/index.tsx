@@ -2,6 +2,7 @@ import { Feather } from "@expo/vector-icons";
 import { router } from "expo-router";
 import React from "react";
 import {
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -19,6 +20,7 @@ export default function DashboardScreen() {
   const insets = useSafeAreaInsets();
   const { user, logout, isAdmin } = useAuth();
   const { revenueEntries, members } = useAppData();
+  const isWeb = Platform.OS === "web";
 
   const totalRevenue = revenueEntries.reduce((s, e) => s + e.amount, 0);
   const sharedEntries = revenueEntries.filter((e) => e.isShared);
@@ -34,7 +36,7 @@ export default function DashboardScreen() {
     container: { flex: 1, backgroundColor: colors.background },
     header: {
       backgroundColor: colors.primary,
-      paddingTop: insets.top + (Platform_OS_web ? 67 : 0),
+      paddingTop: insets.top + (isWeb ? 67 : 0),
       paddingBottom: 24,
       paddingHorizontal: 20,
     },
@@ -222,9 +224,6 @@ export default function DashboardScreen() {
       fontFamily: "Inter_400Regular",
     },
   });
-
-  // platform check for web insets
-  const Platform_OS_web = require("react-native").Platform.OS === "web";
 
   const recent = revenueEntries.slice(0, 5);
 
