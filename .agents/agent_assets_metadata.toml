@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "AvY_jNZqbrlSb-Uq52bmb"
+uri = "file://artifacts/revenue-sharing/assets/images/icon.png"
+type = "image"
+title = "generated_image"
