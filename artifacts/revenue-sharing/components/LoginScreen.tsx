@@ -166,9 +166,9 @@ export default function LoginScreen() {
     >
       <View style={styles.topSection}>
         <View style={styles.logoContainer}>
-          <Text style={styles.logoText}>$</Text>
+          <Text style={styles.logoText}>₱</Text>
         </View>
-        <Text style={styles.appName}>RevenueShare</Text>
+        <Text style={styles.appName}>Daily Share System</Text>
         <Text style={styles.tagline}>Manage and distribute daily revenue{"\n"}among your team members</Text>
       </View>
 
@@ -207,12 +207,6 @@ export default function LoginScreen() {
           )}
         </TouchableOpacity>
 
-        <View style={styles.hint}>
-          <Text style={styles.hintTitle}>Demo Credentials</Text>
-          <Text style={styles.hintText}>
-            Admin: admin / admin123{"\n"}User: user1 / user123
-          </Text>
-        </View>
       </View>
     </KeyboardAvoidingView>
   );

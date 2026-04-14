@@ -30,7 +30,7 @@ export default function DashboardScreen() {
   const todayRevenue = todayEntries.reduce((s, e) => s + e.amount, 0);
 
   const formatCurrency = (n: number) =>
-    n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+    n.toLocaleString("en-PH", { style: "currency", currency: "PHP", maximumFractionDigits: 2 });
 
   const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: colors.background },

@@ -35,7 +35,7 @@ export default function ReportsScreen() {
   const totalNotShared = totalRevenue - totalShared;
 
   const formatCurrency = (n: number) =>
-    n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+    n.toLocaleString("en-PH", { style: "currency", currency: "PHP", maximumFractionDigits: 2 });
 
   const formatDate = (dateStr: string) => {
     const d = new Date(dateStr + "T00:00:00");

@@ -81,7 +81,7 @@ export default function RevenueScreen() {
   };
 
   const formatCurrency = (n: number) =>
-    n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+    n.toLocaleString("en-PH", { style: "currency", currency: "PHP", maximumFractionDigits: 2 });
 
   const num = parseFloat(amount.replace(/[^0-9.]/g, "")) || 0;
   const isWeb = Platform.OS === "web";
@@ -360,7 +360,7 @@ export default function RevenueScreen() {
             <Text style={styles.label}>Amount</Text>
             <TextInput
               style={styles.amountInput}
-              placeholder="$0.00"
+              placeholder="₱0.00"
               placeholderTextColor={colors.mutedForeground}
               value={amount}
               onChangeText={setAmount}
