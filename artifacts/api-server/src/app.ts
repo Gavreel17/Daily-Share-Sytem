@@ -58,7 +58,7 @@ app.get(["/", "/manifest"], (req, res, next) => {
 });
 
 // Fallback to index.html for SPA (if needed, though Expo Go build is mostly static)
-app.get("*", (req, res) => {
+app.get("{*path}", (req, res) => {
   res.sendFile(path.join(STATIC_PATH, "index.html"), (err) => {
     if (err) {
       res.status(404).send("Not Found");
